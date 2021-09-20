@@ -1,3 +1,5 @@
+using ImplementCors.Base.Urls;
+using ImplementCors.Repositories.Data;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -23,7 +25,12 @@ namespace ImplementCors
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddSession();
+            services.AddHttpContextAccessor();
             services.AddControllersWithViews();
+
+            services.AddScoped<PersonRepository>();
+            services.AddScoped<Address>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -43,6 +50,7 @@ namespace ImplementCors
             app.UseStaticFiles();
 
             app.UseRouting();
+            app.UseSession();
 
             app.UseAuthorization();
 
