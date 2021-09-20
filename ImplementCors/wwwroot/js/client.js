@@ -6,6 +6,21 @@
 
 $(document).ready(function () {
     $('#tableClient').DataTable({
+        dom: 'Bfrtip',
+        buttons: [
+            {
+                extend: 'excelHtml5',
+                exportOptions: {
+                    columns: [1, 2, 3, 4]
+                }
+            },
+            {
+                extend: 'pdfHtml5',
+                exportOptions: {
+                    columns: [1, 2, 3, 4]
+                }
+            }
+        ],
         "filter": true,
         "ajax": {
             "url": "https://localhost:44316/api/Persons/GetAllProfile",
@@ -13,6 +28,12 @@ $(document).ready(function () {
             "dataSrc": ""
         },
         "columns": [
+            {
+                "data": null, "sortable": true,
+                "render": function (data, type, row, meta) {
+                    return meta.row + meta.settings._iDisplayStart + 1;
+                }
+            },
             {
                 "data": "nik"
             },
@@ -43,7 +64,8 @@ $(document).ready(function () {
             },
             {
                 "render": function (data, type, row) {
-                    return `<button type="button" class="btn btn-primary" onclick="detail('${row['nik']}')" data-toggle="modal" data-target="#exampleModal">Detail</button >`
+                    return `<button type="button" class="btn btn-primary" onclick="detail('${row['nik']}')" data-toggle="modal" data-target="#exampleModal">Detail</button >
+                            `
                 }
             },
             {
@@ -54,6 +76,7 @@ $(document).ready(function () {
         ]
     });
 });
+
 
 function detail(nik) {
     $.ajax({
@@ -115,17 +138,6 @@ $.ajax({
 $("#registerBtn").click(function (event) {
     event.preventDefault();
 
-    bootstrapValidate('#inputFirstName', 'required');
-    bootstrapValidate('#inputLastName', 'required');
-    bootstrapValidate('#inputPhone', 'required');
-    bootstrapValidate('#inputBirthdate', 'required');
-    bootstrapValidate('#inputSalary', 'required');
-    bootstrapValidate('#inputEmail', 'required');
-    bootstrapValidate('#inputPassword', 'required');
-    bootstrapValidate('#inputDegree', 'required');
-    bootstrapValidate('#inputGpa', 'required');
-    bootstrapValidate('#inputUniversity', 'required');
-
     var obj = new Object();
     var element = document.getElementsByName('inputGender');
 
@@ -149,6 +161,102 @@ $("#registerBtn").click(function (event) {
     obj.GPA = $("#inputGPA").val();
     obj.UniversityId = parseInt($("#inputUniversity").val());
     console.log(obj);
+
+    if ($("#inputNIK").val() == "") {
+        document.getElementById("inputNIK").className = "form-control is-invalid";
+        $("#msgNIK").html("NIK tidak Boleh Kosong");
+    } else {
+        document.getElementById("inputNIK").className = "form-control is-valid";
+        obj.NIK = $("#inputNIK").val();
+    }
+
+    if ($("#inputFirstName").val() == "") {
+        document.getElementById("inputFirstName").className = "form-control is-invalid";
+        $("#msgFirstName").html("First Name tidak boleh kosong");
+    } else {
+        document.getElementById("inputFirstName").className = "form-control is-valid";
+        obj.FirstName = $("#inputFirstName").val();
+    }
+
+    if ($("#inputLastName").val() == "") {
+        document.getElementById("inputLastName").className = "form-control is-invalid";
+        $("#msgLastName").html("Last Name tidak boleh kosong");
+    } else {
+        document.getElementById("inputLastName").className = "form-control is-valid";
+        obj.LastName = $("#inputLastName").val();
+    }
+
+    if ($("#inputPhone").val() == "") {
+        document.getElementById("inputPhone").className = "form-control is-invalid";
+        $("#msgPhone").html("Phone number tidak boleh kosong");
+    } else {
+        document.getElementById("inputPhone").className = "form-control is-valid";
+        obj.Phone = parseInt($("#inputPhone").val());
+    }
+
+    if ($("#inputBirthDate").val() == "") {
+        document.getElementById("inputBirthDate").className = "form-control is-invalid";
+        $("#msgBirthDate").html("Birth Date tidak boleh kosong");
+    } else {
+        document.getElementById("inputBirthDate").className = "form-control is-valid";
+        obj.BirthDate = $("#inputBirthDate").val();
+    }
+
+    if ($("#inputGender").val() == "") {
+        document.getElementById("inputGender").className = "form-control is-invalid";
+        $("#msgGender").html("Gender tidak boleh kosong");
+    } else {
+        document.getElementById("inputGender").className = "form-control is-valid";
+        obj.Gender = parseInt($("#inputGender").val());
+    }
+
+    if ($("#inputSalary").val() == "") {
+        document.getElementById("inputSalary").className = "form-control is-invalid";
+        $("#msgSalary").html("Salary tidak boleh kosong");
+    } else {
+        document.getElementById("inputSalary").className = "form-control is-valid";
+        obj.Salary = parseInt($("#inputSalary").val());
+    }
+
+    if ($("#inputEmail").val() == "") {
+        document.getElementById("inputEmail").className = "form-control is-invalid";
+        $("#msgEmail").html("Email tidak boleh kosong");
+    } else {
+        document.getElementById("inputEmail").className = "form-control is-valid";
+        obj.Email = $("#inputEmail").val();
+    }
+
+    if ($("#inputPassword").val() == "") {
+        document.getElementById("inputPassword").className = "form-control is-invalid";
+        $("#msgPassword").html("Password tidak boleh kosong");
+    } else {
+        document.getElementById("inputPassword").className = "form-control is-valid";
+        obj.Password = $("#inputPassword").val();
+    }
+
+    if ($("#inputDegree").val() == "") {
+        document.getElementById("inputDegree").className = "form-control is-invalid";
+        $("#msgDegree").html("Degree tidak boleh kosong");
+    } else {
+        document.getElementById("inputDegree").className = "form-control is-valid";
+        obj.Degree = $("#inputDegree").val();
+    }
+
+    if ($("#inputGPA").val() == "") {
+        document.getElementById("inputGPA").className = "form-control is-invalid";
+        $("#msgGPA").html("Gender tidak boleh kosong");
+    } else {
+        document.getElementById("inputGPA").className = "form-control is-valid";
+        obj.GPA = $("#inputGPA").val();
+    }
+
+    if ($("#inputUniversity").val() == "") {
+        document.getElementById("inputUniversity").className = "form-control is-invalid";
+        $("#msgUniversity").html("Gender tidak boleh kosong");
+    } else {
+        document.getElementById("inputUniversity").className = "form-control is-valid";
+        obj.UniversityId = parseInt($("#inputUniversity").val());
+    }
 
     $.ajax({
         url: 'https://localhost:44316/API/Persons/Register',
@@ -177,27 +285,41 @@ $("#registerBtn").click(function (event) {
 })
 
 function deleted(nik) {
-    $.ajax({
-        url: `https://localhost:44316/API/Persons/${nik}`,
-        type: "DELETE",
-        headers: {
-            'Accept': 'application/json',
-            'Content-Type': 'application/json'
+    Swal.fire({
+        title: 'Anda ingin menghapus data ?',
+        text : "Pastikan dulu yaa",
+        icon: 'warning',
+        showCancelButton: true,
+        confirmButtonColor: '#3085d6',
+        cancelButtonColor: '#d33',
+        confirmButtonText: 'Delete',
+        cancelButtonText: 'Cancel'
+    }).then((result) => {
+        if (result.isConfirmed) {
+            $.ajax({
+                url: `https://localhost:44316/API/Persons/${nik}`,
+                type: "DELETE",
+                headers: {
+                    'Accept': 'application/json',
+                    'Content-Type': 'application/json'
+                }
+            }).done((result) => {
+                Swal.fire({
+                    title: 'Success!',
+                    text: 'Data Has Been Deleted',
+                    icon: 'success',
+                    confirmButtonText: 'Next'
+                })
+                $('#tableClient').DataTable().ajax.reload();
+            }).fail((error) => {
+                Swal.fire({
+                    title: 'Error!',
+                    text: 'Data Cannot Deleted',
+                    icon: 'Error',
+                    confirmButtonText: 'Next'
+                })
+            });
         }
-    }).done((result) => {
-        $('#tableClient').DataTable().ajax.reload();
-        Swal.fire({
-            title: 'Success!',
-            text: 'Data Has Been Deleted',
-            icon: 'success',
-            confirmButtonText: 'Next'
-        })
-    }).fail((error) => {
-        Swal.fire({
-            title: 'Error!',
-            text: 'Data Cannot Deleted',
-            icon: 'Error',
-            confirmButtonText: 'Next'
-        })
-    });
+    })
+    
 }

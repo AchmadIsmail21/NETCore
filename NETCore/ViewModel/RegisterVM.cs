@@ -27,7 +27,7 @@ namespace NETCore.ViewModel
         public Gender gender { get; set; }
         [Required]
         public int Salary { get; set; }
-        [Required]
+        [Required(ErrorMessage = "Email Tidak Boleh Kosong")]
         public string Email { get; set; }
         [Required]
         [StringLength(50, ErrorMessage = "Minimal Password 6 and Maximal Password 50", MinimumLength = 6)]

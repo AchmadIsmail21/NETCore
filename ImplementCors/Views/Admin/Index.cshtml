@@ -1,4 +1,4 @@
-﻿@*@{
+﻿@{
     Layout = "~/Views/Shared/AdminLTE/_Layout.cshtml";
 }
 
@@ -13,18 +13,28 @@
     <div class="container-fluid">
         <div class="row">
             <div class="col-5">
-                <div class="card" id="UnivContainer">
-                    <div class="card-header bg-transparent border-success">University Chart</div>
+                <div class="card" id="PersonContainer">
+                    <div class="card-header bg-transparent border-success">Gender Chart</div>
                     <div class="card-body">
-                        <div id="UniCh"></div>
+                        <div id="PersonCh"></div>
                     </div>
                 </div>
             </div>
             <div class="col-5">
-                <div class="card" id="SalContainer">
-                    <div class="card-header bg-transparent border-success"> Chart</div>
+                <div class="card" id="UniversityContainer">
+                    <div class="card-header bg-transparent border-success">University Chart</div>
                     <div class="card-body">
-                        <div id="SalCh"></div>
+                        <div id="UnivCh"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-7">
+                <div class="card" id="SalaryContainer">
+                    <div class="card-header bg-transparent border-success">Salary Chart</div>
+                    <div class="card-body">
+                        <div id="SalaryCh"></div>
                     </div>
                 </div>
             </div>
@@ -34,4 +44,4 @@
 </html>
 @section scripts{
     <script src="~/js/Admin.js" asp-append-version="true"></script>
-}*@
+}
