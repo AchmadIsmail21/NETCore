@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\achma\\source\\repos\\NETCore\\ImplementCors\\ImplementCors.csproj": {}
+    "C:\\Users\\achma\\Documents\\GitHub\\NETCore\\ImplementCors\\ImplementCors.csproj": {}
   },
   "projects": {
-    "C:\\Users\\achma\\source\\repos\\NETCore\\ImplementCors\\ImplementCors.csproj": {
+    "C:\\Users\\achma\\Documents\\GitHub\\NETCore\\ImplementCors\\ImplementCors.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\achma\\source\\repos\\NETCore\\ImplementCors\\ImplementCors.csproj",
+        "projectUniqueName": "C:\\Users\\achma\\Documents\\GitHub\\NETCore\\ImplementCors\\ImplementCors.csproj",
         "projectName": "ImplementCors",
-        "projectPath": "C:\\Users\\achma\\source\\repos\\NETCore\\ImplementCors\\ImplementCors.csproj",
+        "projectPath": "C:\\Users\\achma\\Documents\\GitHub\\NETCore\\ImplementCors\\ImplementCors.csproj",
         "packagesPath": "C:\\Users\\achma\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\achma\\source\\repos\\NETCore\\ImplementCors\\obj\\",
+        "outputPath": "C:\\Users\\achma\\Documents\\GitHub\\NETCore\\ImplementCors\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\achma\\AppData\\Roaming\\NuGet\\NuGet.Config",

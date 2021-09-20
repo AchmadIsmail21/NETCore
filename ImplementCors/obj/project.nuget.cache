@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "ZgrQ8hTyGJl8Xr2U/YpAaVmb4dZ4a7OIayjumm7S2+PPbLADSGXKUftX2+v5+zeUdUok9PCHdQ+2Prfe1jK8Uw==",
+  "dgSpecHash": "RtlJ9ZR/wKPi7Q58BLOAcBCYDZbMNqUpOWISuBmQKN8sCbFF2IWRZzl4Z7BHf2YXHbxQ5PZh+BpGw0y68sdzcQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\achma\\source\\repos\\NETCore\\ImplementCors\\ImplementCors.csproj",
+  "projectFilePath": "C:\\Users\\achma\\Documents\\GitHub\\NETCore\\ImplementCors\\ImplementCors.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\achma\\.nuget\\packages\\microsoft.aspnetcore.html.abstractions\\2.2.0\\microsoft.aspnetcore.html.abstractions.2.2.0.nupkg.sha512",
     "C:\\Users\\achma\\.nuget\\packages\\microsoft.aspnetcore.razor\\2.2.0\\microsoft.aspnetcore.razor.2.2.0.nupkg.sha512",

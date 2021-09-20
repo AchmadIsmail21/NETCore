@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "o80rw+lCSZLikxFduyUUc1pePVpXgF3I4EJYZYx7cdB+3hI/8OrpEo9t+bE0C8VF9GQoQe5v8tXdU5foZweRyA==",
+  "dgSpecHash": "4lE4luw8UEQTajDa4u9a9ESM/JV7R9o4wv1DTZMOerv1I1NChP7OSg4x2mwl+26PJXcesgIicF40pABBQaMNJw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\achma\\source\\repos\\NETCore\\NETCore\\NETCore.csproj",
+  "projectFilePath": "C:\\Users\\achma\\Documents\\GitHub\\NETCore\\NETCore\\NETCore.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\achma\\.nuget\\packages\\bcrypt.net-core\\1.6.0\\bcrypt.net-core.1.6.0.nupkg.sha512",
     "C:\\Users\\achma\\.nuget\\packages\\castle.core\\4.4.1\\castle.core.4.4.1.nupkg.sha512",

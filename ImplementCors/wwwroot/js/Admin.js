@@ -1,4 +1,4 @@
-﻿
+﻿//const { data } = require("jquery");
 $(document).ready(function () {
     $.ajax({
         url: `https://localhost:44316/api/Persons/GetAllProfile`,
@@ -90,14 +90,16 @@ $(document).ready(function () {
         console.log(result);
         var female = result.filter(data => data.gender === 1).length;
 
-        var salary = result.filter(data => data.salary > 1500000).length;
-        var salary2 = result.filter(data => data.salary < 5500000).length;
+        var salary = result.filter(data => data.salary > 1000000 && data.salary < 2000000).length;
+        var salary2 = result.filter(data => data.salary > 2000000 && data.salary < 4000000).length;
+        var salary3 = result.filter(data => data.salary > 4000000 && data.salary < 10000000).length;
 
         var options = {
             series: [{
-                data: [male, female]
+                data: [salary, salary2, salary3]
             }],
             chart: {
+
                 height: 350,
                 type: 'bar',
             },
@@ -121,7 +123,7 @@ $(document).ready(function () {
                 }
             },
             xaxis: {
-                categories: ["Male", "Female"],
+                categories: ["1jt-2jt", "2jt-4jt", "4jt-10jt"],
                 position: 'top',
                 axisBorder: {
                     show: false
@@ -160,7 +162,7 @@ $(document).ready(function () {
                 }
             }
         };
-        var chart = new ApexCharts(document.querySelector("#PersonCh"), options);
+        var chart = new ApexCharts(document.querySelector("#SalaryCh"), options);
         chart.render();
     }).fail((error) => {
         Swal.fire({

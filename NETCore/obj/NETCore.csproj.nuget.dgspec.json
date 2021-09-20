@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\achma\\source\\repos\\NETCore\\NETCore\\NETCore.csproj": {}
+    "C:\\Users\\achma\\Documents\\GitHub\\NETCore\\NETCore\\NETCore.csproj": {}
   },
   "projects": {
-    "C:\\Users\\achma\\source\\repos\\NETCore\\NETCore\\NETCore.csproj": {
+    "C:\\Users\\achma\\Documents\\GitHub\\NETCore\\NETCore\\NETCore.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\achma\\source\\repos\\NETCore\\NETCore\\NETCore.csproj",
+        "projectUniqueName": "C:\\Users\\achma\\Documents\\GitHub\\NETCore\\NETCore\\NETCore.csproj",
         "projectName": "NETCore",
-        "projectPath": "C:\\Users\\achma\\source\\repos\\NETCore\\NETCore\\NETCore.csproj",
+        "projectPath": "C:\\Users\\achma\\Documents\\GitHub\\NETCore\\NETCore\\NETCore.csproj",
         "packagesPath": "C:\\Users\\achma\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\achma\\source\\repos\\NETCore\\NETCore\\obj\\",
+        "outputPath": "C:\\Users\\achma\\Documents\\GitHub\\NETCore\\NETCore\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\achma\\AppData\\Roaming\\NuGet\\NuGet.Config",
