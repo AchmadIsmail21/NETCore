@@ -90,9 +90,9 @@ $(document).ready(function () {
         console.log(result);
         var female = result.filter(data => data.gender === 1).length;
 
-        var salary = result.filter(data => data.salary > 1000000 && data.salary < 2000000).length;
-        var salary2 = result.filter(data => data.salary > 2000000 && data.salary < 4000000).length;
-        var salary3 = result.filter(data => data.salary > 4000000 && data.salary < 10000000).length;
+        var salary = result.filter(data => data.salary > 1000000 && data.salary <= 2000000).length;
+        var salary2 = result.filter(data => data.salary > 2000000 && data.salary <= 4000000).length;
+        var salary3 = result.filter(data => data.salary > 4000000 && data.salary <= 10000000).length;
 
         var options = {
             series: [{
