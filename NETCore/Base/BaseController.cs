@@ -63,12 +63,13 @@ namespace NETCore.Controllers
             if (repository.Get() != null)
             {
 
-                return Ok(new
-                {
-                    status = HttpStatusCode.OK,
-                    data = repository.Get(),
-                    message = "Data berhasil Di tampilkan"
-                });
+                /* return Ok(new
+                 {
+                     status = HttpStatusCode.OK,
+                     data = repository.Get(),
+                     message = "Data berhasil Di tampilkan"
+                 });*/
+                return Ok(repository.Get());
             }
             else {
                 return NotFound("Data Tidak Ada");

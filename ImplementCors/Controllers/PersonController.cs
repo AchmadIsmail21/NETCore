@@ -24,11 +24,12 @@ namespace ImplementCors.Controllers
         {
             return View();
         }
+        [HttpGet]
         public async Task<JsonResult> GetAllData() {
             var result = await personRepository.GetAllProfile();
             return Json(result);
         }
-
+        [HttpGet]
         public async Task<JsonResult> GetById(string nik) {
             var result = await personRepository.GetById(nik);
             return Json(result);

@@ -14,6 +14,39 @@ $(document).ready(function () {
             series: [male, female],
             chart: {
                 type: 'pie',
+                toolbar: {
+                    show: true,
+                    offsetX: 0,
+                    offsetY: 0,
+                    tools: {
+                        download: true,
+                        selection: true,
+                        zoom: true,
+                        zoomin: true,
+                        zoomout: true,
+                        pan: true,
+                        reset: true | '<img src="/static/icons/reset.png" width="20">',
+                        customIcons: []
+                    },
+                    export: {
+                        csv: {
+                            filename: undefined,
+                            columnDelimiter: ',',
+                            headerCategory: 'category',
+                            headerValue: 'value',
+                            dateFormatter(timestamp) {
+                                return new Date(timestamp).toDateString()
+                            }
+                        },
+                        svg: {
+                            filename: undefined,
+                        },
+                        png: {
+                            filename: undefined,
+                        }
+                    },
+                    autoSelected: 'zoom'
+                },
             },
             labels: ['Male', 'Female'],
             responsive: [{
@@ -55,7 +88,41 @@ $(document).ready(function () {
             series: [harvard, oxford],
             chart: {
                 type: 'donut',
+                toolbar: {
+                    show: true,
+                    offsetX: 0,
+                    offsetY: 0,
+                    tools: {
+                        download: true,
+                        selection: true,
+                        zoom: true,
+                        zoomin: true,
+                        zoomout: true,
+                        pan: true,
+                        reset: true | '<img src="/static/icons/reset.png" width="20">',
+                        customIcons: []
+                    },
+                    export: {
+                        csv: {
+                            filename: undefined,
+                            columnDelimiter: ',',
+                            headerCategory: 'category',
+                            headerValue: 'value',
+                            dateFormatter(timestamp) {
+                                return new Date(timestamp).toDateString()
+                            }
+                        },
+                        svg: {
+                            filename: undefined,
+                        },
+                        png: {
+                            filename: undefined,
+                        }
+                    },
+                    autoSelected: 'zoom'
+                },
             },
+
             labels: ['Harvard', 'Oxford'],
             responsive: [{
                 breakpoint: 480,

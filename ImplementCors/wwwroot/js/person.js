@@ -23,7 +23,7 @@ $(document).ready(function () {
         ],
         "filter": true,
         "ajax": {
-            "url": "https://localhost:44316/api/Persons/GetAllProfile",
+            "url": "/person/getalldata",
             "datatype": "json",
             "dataSrc": ""
         },
