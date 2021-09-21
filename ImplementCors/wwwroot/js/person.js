@@ -80,7 +80,7 @@ $(document).ready(function () {
 
 function detail(nik) { 
     $.ajax({
-        url: `/persons/GetNik/${nik}`
+        url: `/persons/GetById/${nik}`
     }).done((result) => {
         console.log(result)
         text = ` <table class="table table-bordered">
