@@ -69,7 +69,7 @@ namespace NETCore.Controllers
                      data = repository.Get(),
                      message = "Data berhasil Di tampilkan"
                  });*/
-                return Ok(repository.Get());
+               return Ok(repository.Get());
             }
             else {
                 return NotFound("Data Tidak Ada");

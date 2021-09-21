@@ -23,7 +23,7 @@ $(document).ready(function () {
         ],
         "filter": true,
         "ajax": {
-            "url": "/person/getalldata",
+            "url": "/persons/getalldata",
             "datatype": "json",
             "dataSrc": ""
         },
@@ -126,7 +126,7 @@ $.ajax({
 
 }).done(result => {
     text = ''
-    $.each(result.data, function (key, val) {
+    $.each(result, function (key, val) {
         console.log(val.id)
         text += `<option value= "${val.id}">${val.name}</option>`
     })

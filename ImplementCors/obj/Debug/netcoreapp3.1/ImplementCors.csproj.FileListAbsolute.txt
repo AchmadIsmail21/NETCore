@@ -229,7 +229,6 @@ C:\Users\achma\Documents\GitHub\NETCore\ImplementCors\obj\Debug\netcoreapp3.1\Im
 C:\Users\achma\Documents\GitHub\NETCore\ImplementCors\obj\Debug\netcoreapp3.1\ImplementCors.dll
 C:\Users\achma\Documents\GitHub\NETCore\ImplementCors\obj\Debug\netcoreapp3.1\ImplementCors.pdb
 C:\Users\achma\Documents\GitHub\NETCore\ImplementCors\obj\Debug\netcoreapp3.1\ImplementCors.genruntimeconfig.cache
-C:\Users\achma\Documents\GitHub\NETCore\ImplementCors\obj\Debug\netcoreapp3.1\Razor\Views\Person\Index.cshtml.g.cs
 C:\Users\achma\Documents\GitHub\NETCore\ImplementCors\obj\Debug\netcoreapp3.1\ImplementCors.MvcApplicationPartsAssemblyInfo.cs
 C:\Users\achma\Documents\GitHub\NETCore\ImplementCors\bin\Debug\netcoreapp3.1\NETCore.deps.json
 C:\Users\achma\Documents\GitHub\NETCore\ImplementCors\bin\Debug\netcoreapp3.1\NETCore.runtimeconfig.json
@@ -287,3 +286,4 @@ C:\Users\achma\Documents\GitHub\NETCore\ImplementCors\bin\Debug\netcoreapp3.1\ru
 C:\Users\achma\Documents\GitHub\NETCore\ImplementCors\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
 C:\Users\achma\Documents\GitHub\NETCore\ImplementCors\bin\Debug\netcoreapp3.1\NETCore.dll
 C:\Users\achma\Documents\GitHub\NETCore\ImplementCors\bin\Debug\netcoreapp3.1\NETCore.pdb
+C:\Users\achma\Documents\GitHub\NETCore\ImplementCors\obj\Debug\netcoreapp3.1\Razor\Views\Persons\Index.cshtml.g.cs

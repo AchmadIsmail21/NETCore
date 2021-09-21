@@ -11,11 +11,11 @@ using System.Threading.Tasks;
 
 namespace ImplementCors.Controllers
 {
-    public class PersonController : BaseController<Person, PersonRepository, string>
+    public class PersonsController : BaseController<Person, PersonRepository, string>
     {
         PersonRepository personRepository;
 
-        public PersonController(PersonRepository personRepository) : base(personRepository)
+        public PersonsController(PersonRepository personRepository) : base(personRepository)
         {
             this.personRepository = personRepository;
         }
