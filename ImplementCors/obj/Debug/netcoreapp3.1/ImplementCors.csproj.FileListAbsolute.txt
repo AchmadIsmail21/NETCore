@@ -287,3 +287,4 @@ C:\Users\achma\Documents\GitHub\NETCore\ImplementCors\bin\Debug\netcoreapp3.1\ru
 C:\Users\achma\Documents\GitHub\NETCore\ImplementCors\bin\Debug\netcoreapp3.1\NETCore.dll
 C:\Users\achma\Documents\GitHub\NETCore\ImplementCors\bin\Debug\netcoreapp3.1\NETCore.pdb
 C:\Users\achma\Documents\GitHub\NETCore\ImplementCors\obj\Debug\netcoreapp3.1\Razor\Views\Persons\Index.cshtml.g.cs
+C:\Users\achma\Documents\GitHub\NETCore\ImplementCors\obj\Debug\netcoreapp3.1\Razor\Views\Home\Person.cshtml.g.cs

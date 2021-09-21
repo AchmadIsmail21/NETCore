@@ -78,10 +78,11 @@ $(document).ready(function () {
 });
 
 
-function detail(nik) {
+function detail(nik) { 
     $.ajax({
-        url: `https://localhost:44316/api/Persons/GetById/${nik}`
+        url: `/persons/GetNik/${nik}`
     }).done((result) => {
+        console.log(result)
         text = ` <table class="table table-bordered">
                 <tbody>
                     <tr>

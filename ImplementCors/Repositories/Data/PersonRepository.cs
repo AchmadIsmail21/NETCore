@@ -17,12 +17,12 @@ namespace ImplementCors.Repositories.Data
         private readonly Address address;
         private readonly HttpClient httpClient;
         private readonly string request;
-        private readonly IHttpContextAccessor contextAccessor;
+        private readonly IHttpContextAccessor _contextAccessor;
         public PersonRepository(Address address, string request = "Persons/") : base(address, request)
         {
             this.address = address;
             this.request = request;
-            contextAccessor = new HttpContextAccessor();
+            _contextAccessor = new HttpContextAccessor();
             httpClient = new HttpClient
             {
                 BaseAddress = new Uri(address.link)
