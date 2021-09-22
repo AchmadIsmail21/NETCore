@@ -1,5 +1,6 @@
 ﻿using ImplementCors.Base.Controllers;
 using ImplementCors.Repositories.Data;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using NETCore.Models;
@@ -22,6 +23,11 @@ namespace ImplementCors.Controllers
 
         public IActionResult Login()
         {
+            var ident = User.Identity.IsAuthenticated;
+            if (ident) {
+                return RedirectToAction("Index", "home");
+            }
+            
             return View();
         }
 
@@ -38,6 +44,12 @@ namespace ImplementCors.Controllers
             }
             HttpContext.Session.SetString("JWToken", token);
             return RedirectToAction("Index", "home");
+        }
+        [HttpGet("Logout/")]
+        [Authorize]
+        public IActionResult Logout() {
+            HttpContext.Session.Clear();
+            return RedirectToAction("login", "Login");
         }
 
     }

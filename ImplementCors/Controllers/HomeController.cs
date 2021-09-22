@@ -20,7 +20,7 @@ namespace ImplementCors.Controllers
         {
             _logger = logger;
         }
-        [Authorize]
+        
         public IActionResult Index()
         {
             ViewBag.Token = HttpContext.Session.GetString("JWToken");
@@ -31,7 +31,7 @@ namespace ImplementCors.Controllers
         {
             return View();
         }
-
+        [Authorize]
         public IActionResult Person()
         {
             

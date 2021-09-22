@@ -43,9 +43,19 @@
                 </li>
             </ul>
             <!-- Right navbar links -->
-            <div class="navbar-nav ml-auto">
-                <a class="btn btn-light" href="https://localhost:44381/login/login">Login</a>
-            </div>
+            @{ var iden = User.Identity.IsAuthenticated; }
+            @if (iden)
+            {
+                    <div class="navbar-nav ml-auto">
+                        <a class="btn btn-danger" asp-controller="Login" asp-action="Logout">Sign Out</a>
+                    </div>        
+            }
+            else { 
+                    <div class="navbar-nav ml-auto">
+                        <a class="btn btn-light" href="https://localhost:44381/login/login">Login</a>
+                    </div>
+            }
+            
         </nav>
         <!-- /.navbar -->
         <!-- Main Sidebar Container -->
