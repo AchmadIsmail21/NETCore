@@ -24,7 +24,7 @@ namespace ImplementCors.Repositories
         {
             this.address = address;
             this.request = request;
-            //_contextAccessor = new HttpContextAccessor();
+            _contextAccessor = new HttpContextAccessor();
             httpClient = new HttpClient
             {
                 BaseAddress = new Uri(address.link)

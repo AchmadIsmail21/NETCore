@@ -88,10 +88,9 @@ namespace NETCore.Controllers
                                                  claim, expires: DateTime.UtcNow.AddDays(1),
                                                  signingCredentials: signIn
                                                 );
-                return Ok(new { 
-                               status = HttpStatusCode.OK,
-                               token = new JwtSecurityTokenHandler().WriteToken(token),
-                               message = "Login Berhasil"
+                return Ok(new JWTokenVM{ 
+                               Token = new JwtSecurityTokenHandler().WriteToken(token),
+                               Messages = "Login Berhasil"
                 });
 
                 /*return Ok(new

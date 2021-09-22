@@ -1,6 +1,7 @@
 ﻿using ImplementCors.Base.Controllers;
 using ImplementCors.Models;
 using ImplementCors.Repositories.Data;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using NETCore.Models;
 using System;
@@ -12,6 +13,7 @@ using System.Threading.Tasks;
 namespace ImplementCors.Controllers
 {
     [Route("[controller]")]
+    //[Authorize(Roles = "User")]
     public class PersonsController : BaseController<Person, PersonRepository, string>
     {
         PersonRepository personRepository;
