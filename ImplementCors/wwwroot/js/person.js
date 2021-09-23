@@ -140,19 +140,12 @@ $("#registerBtn").click(function (event) {
     event.preventDefault();
 
     var obj = new Object();
-    var element = document.getElementsByName('inputGender');
-
-    for (var i = 0; i < element.lenght; i++) {
-        if (element[i].checked) {
-            var gender = element[i].value;
-        }
-    }
-    console.log(gender);
+    
 
     obj.NIK = $('#inputNIK').val();
     obj.FirstName = $("#inputFirstName").val();
     obj.LastName = $("#inputLastName").val();
-    obj.Phone = parseInt($("#inputPhone").val());
+    obj.Phone = $("#inputPhone").val();
     obj.BirthDate = $("#inputBirthDate").val();
     obj.Gender = parseInt($("#inputGender").val());
     obj.Salary = parseInt($("#inputSalary").val());
@@ -192,7 +185,7 @@ $("#registerBtn").click(function (event) {
         $("#msgPhone").html("Phone number tidak boleh kosong");
     } else {
         document.getElementById("inputPhone").className = "form-control is-valid";
-        obj.Phone = parseInt($("#inputPhone").val());
+        obj.Phone = $("#inputPhone").val();
     }
 
     if ($("#inputBirthDate").val() == "") {
@@ -260,14 +253,17 @@ $("#registerBtn").click(function (event) {
     }
 
     $.ajax({
-        url: 'https://localhost:44316/API/Persons/Register',
-        type: "POST",
-        headers: {
-            'Accept': 'application/json',
-            'Content-Type': 'application/json'
+        url: '/persons/RegisterData/',
+        type: "post",
+        dataType: "json",
+        contentType: 'application/json; charset=utf-8',
+        data: JSON.stringify(obj),
+        success: function (data) {
+            console.log("Succes")
         },
-        data: JSON.stringify(obj)
+        error: console.log("Error")
     }).done((result) => {
+        console.log(result)
         $('#tableClient').DataTable().ajax.reload();
         Swal.fire({
             title: 'Success!',
@@ -283,6 +279,7 @@ $("#registerBtn").click(function (event) {
         })
         console.log(error);
     });
+      
 })
 
 function deleted(nik) {

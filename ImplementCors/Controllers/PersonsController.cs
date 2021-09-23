@@ -4,6 +4,7 @@ using ImplementCors.Repositories.Data;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using NETCore.Models;
+using NETCore.ViewModel;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -22,7 +23,20 @@ namespace ImplementCors.Controllers
         {
             this.personRepository = personRepository;
         }
-        
+
+        [HttpPost("RegisterData/")]
+        public JsonResult RegisterData([FromBody]RegisterVM registerVM)
+        {
+            var result = personRepository.RegisterPerson(registerVM);
+            return Json(result);
+        }
+        /*[HttpPost("Register")]
+        public async Task<JsonResult> Register([FromBody]RegisterVM registerVM)
+        {
+            var result = await personRepository.Register(registerVM);
+            return Json(result);
+        }*/
+
         [HttpGet("GetAllData")]
         public async Task<JsonResult> GetAllData() {
             var result = await personRepository.GetAllProfile();

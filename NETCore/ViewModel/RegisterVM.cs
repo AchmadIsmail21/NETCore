@@ -1,4 +1,6 @@
 ﻿using NETCore.Models;
+using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
@@ -23,7 +25,9 @@ namespace NETCore.ViewModel
             Male,
             Female
         }
-        [Required]
+        
+        [Range(0, 1)]
+        [JsonConverter(typeof(StringEnumConverter))]
         public Gender gender { get; set; }
         [Required]
         public int Salary { get; set; }

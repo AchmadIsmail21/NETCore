@@ -5,9 +5,9 @@ $(document).ready(function () {
         type: "GET"
     }).done((result) => {
         console.log(result);
-        var female = result.filter(data => data.gender === 1).length;
-        var male = result.filter(data => data.gender === 0).length;
-        
+        var female = result.filter(data => data.gender === "Female").length;
+        var male = result.filter(data => data.gender === "Male").length;
+        console.log(female)
         console.log(male);
         
         var options = {

@@ -9,6 +9,8 @@ using System.Threading.Tasks;
 using NETCore.ViewModel;
 using Newtonsoft.Json;
 using NETCore.Models;
+using System.Text;
+using System.Net;
 
 namespace ImplementCors.Repositories.Data
 {
@@ -28,6 +30,8 @@ namespace ImplementCors.Repositories.Data
                 BaseAddress = new Uri(address.link)
             };
         }
+
+
         public async Task<List<RegisterVM>> GetAllProfile() {
             List<RegisterVM> registers = new List<RegisterVM>();
             using (var response = await httpClient.GetAsync(request + "GetAllProfile")) {
@@ -45,6 +49,33 @@ namespace ImplementCors.Repositories.Data
                 register = JsonConvert.DeserializeObject<RegisterVM>(apiResponse);
             }
             return register;
+        }
+        /*public HttpStatusCode Register(RegisterVM register)
+        {
+
+            *//*StringContent content = new StringContent(JsonConvert.SerializeObject(register)
+                , Encoding.UTF8, "application/json");
+            using (var response = await httpClient.PostAsync(address.link + request + "Register", content))
+            {
+                string apiResponse = await response.Content.ReadAsStringAsync();
+                register = JsonConvert.DeserializeObject<RegisterVM>(apiResponse);
+
+            }
+
+            return register;*//*
+
+            StringContent content = new StringContent(JsonConvert.SerializeObject(register), Encoding.UTF8, "application/json");
+            var result = httpClient.PostAsync(request + "Register", content).Result;
+            return result.StatusCode;
+        }*/
+
+        public String RegisterPerson(RegisterVM registerVM)
+        {
+            StringContent content = new StringContent(JsonConvert.SerializeObject(registerVM), Encoding.UTF8, "application/json");
+            var response = httpClient.PostAsync(request + "Register", content).Result.Content.ReadAsStringAsync().Result;
+
+
+            return response;
         }
     }
 }
